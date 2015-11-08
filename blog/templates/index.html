@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kong Yue & Sheng Ying</title>
+    <link rel="shortcut icon" href="{% static "images/favicon.ico" %}">
+    <!-- Bootstrap 3.2 -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <!-- Font Awesome 4.2.0 -->
+    <link href="{% static "css/font-awesome-4.2.0/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+    <!-- ilove Font 1.0 -->
+    <link href="{% static "css/ilove/font-ilove.css" %}" rel="stylesheet" type="text/css">   
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/animate.css" %}">
+    <!-- Magnific popup -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/magnific-popup.css" %}">
+    <!-- Owl stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/owl.carousel.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/owl.theme.css" %}">
+    <!-- Custom Style -->
+    <link rel="stylesheet" type="text/css" href=" {% static "css/style.css" %}">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+    </div>
+   
+    <!--Carousel-->
+    <div id="myCarousel" class="carousel slide carousel-fade">   
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div id="progressbar"></div>
+            <!-- Wrapper for slides -->           
+            <div class="carousel-inner">
+                <div class="messages">
+                        <h1 class="slideInDown wow animated" data-wow-delay="0.5s">孔越 <span class="heart pulsing fa fa-heart"></span> 沈颖</h1>
+                        <div id="time"></div>
+                        <h4 class="fadeIn wow animated" data-wow-delay="1.2s">In love and counting</h4>
+                        <div class="btn-special slideInUp wow animated page-scroll" data-wow-delay="0.7s">
+                            <a href="#about"><span>Discover More</span></a>
+                        </div>          
+                </div>
+                <div class="item active">
+                    <div class="carousel-img" style="background-image:url({% static "images/carousel-1.jpg" %})"></div>                            
+                </div> 
+                <div class="item">
+                    <div class="carousel-img" style="background-image:url({% static "images/carousel-2.jpg" %})"></div>                            
+                </div>
+                <div class="item">
+                    <div class="carousel-img" style="background-image:url({% static "images/carousel-3.jpg" %})"></div>                            
+                </div>                                              
+            </div>
+            <div class="overlay2"></div>                
+            <div id="geo" class="geo">
+               <div id="output" class="geo">
+               </div>
+            </div>             
+    </div>
+    
+    <div id="about"></div>    
+    <!--Navbar-->
+    <div class="topbar-nav">        
+        <nav class="navbar navbar-default navbar-custom" role="navigation">
+            <div class="container">        
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button> 
+                    <a class="navbar-brand" href="#page-top">
+                        <img src=" {% static "images/logo.jpg" %}" alt="logo" height="50" width="50">
+                    </a>                              
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from Adam & Eve link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>                                               
+                        <li class="page-scroll">
+                            <a href="#about">Yue & Ying</a>
+                        </li>                       
+                        <li class="page-scroll dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#moments">我们的故事</a>
+                            <ul class="dropdown-menu wow swing" role="menu">
+                                <li><a href="#aboutthem">关于我们</a></li>
+                                <li><a href="#moments">我们的时刻</a></li>
+                                <li><a href="#favourites">我们的最爱</a></li>
+                            </ul>                             
+                        </li>                                                   
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            
+            </div>
+        </nav>
+    </div>   
+    
+    <!--Adam & EVE Section-->
+    <section id="aboutthem" class="white">
+        <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h2 class="wow fadeInUp underline padtop50" data-wow-delay="0.5s">Welcome Everyone</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.7s">
+                            欢迎来到孔越和沈颖的爱情故事.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <ul class="ch-grid man wow flipInX" data-wow-delay="0.5s">
+                            <li>
+                                <div class="ch-item ch-img-1">
+                                    <div class="ch-info">
+                                        <h3>我是孔越</h3>
+                                        <p>射手龙， 公务猿。自幼与胞弟共分享同竞争，乐观大度，积极向上。当下最长远的工作愿景是党国风调雨顺，国泰民安。</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>   
+                    </div>
+                    <div class="and">&amp;</div> 
+                    <div class="col-md-6">
+                        <ul class="ch-grid woman wow flipInX" data-wow-delay="0.5s">
+                            <li>
+                                <div class="ch-item ch-img-2">
+                                    <div class="ch-info">
+                                        <h3>我是沈颖</h3>
+                                        <p>双子蛇，金融狗。打小乖巧独立人见人爱，开朗伶俐，勤恳上进。目前最宏大的人生理想是环游世界。</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>   
+                    </div>              
+                </div>
+            </div>
+        </div>        
+        <!--Loveline-->
+        <div class="container">                    
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h2 class="wow fadeInUp underline padtop50" data-wow-delay="0.5s">Our Loveline</h2>
+                        <!-- <p class="wow fadeInUp" data-wow-delay="0.7s">
+                            <strong>Love Moments</strong> are special and it deserve to be recorded and to be always remembered!  our loveline is just summerize some of our important and happy moments.
+                        </p> -->
+                    </div>                
+                    <ul class="timeline"> 
+                        <li> 
+                            <div class="timeline-badge wow fadeInUp" data-wow-delay="0.5s"><i class="icon icolove-lips"></i></div> 
+                            <div class="timeline-panel wow fadeInLeft" data-wow-delay="0.7s"> 
+                                <div class="timeline-heading"> 
+                                    <h4 class="timeline-title">第一次亲吻</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2013年10月24日</small></p> 
+                                </div> 
+                                <div class="timeline-body"> 
+                                    <p>
+                                        我是天才
+                                        天才
+                                    </p>
+                                </div> 
+                            </div> 
+                        </li>
+                         
+                        <li class="timeline-inverted negative100"> 
+                            <div class="timeline-badge time wow fadeInUp" data-wow-delay="0.5s"><i class="icon icolove-plane"></i></div> 
+                            <div class="timeline-panel wow fadeInRight" data-wow-delay="0.7s"> 
+                                <div class="timeline-heading"> 
+                                    <h4 class="timeline-title">第一次旅行</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2014年5月22日</small></p> 
+                                </div> 
+                                <div class="timeline-body"> 
+                                    <p>
+                                        我是天才
+                                        天才
+                                    </p>                                      
+                                </div> 
+                            </div> 
+                        </li>
+                        
+                        <li class="negative75"> 
+                            <div class="timeline-badge wow fadeInUp" data-wow-delay="0.5s"><i class="icon icolove-married"></i></div> 
+                            <div class="timeline-panel wow fadeInLeft" data-wow-delay="0.7s"> 
+                                <div class="timeline-heading"> 
+                                    <h4 class="timeline-title">我们结婚啦</h4>
+                                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2016年1月13日</small></p> 
+                                </div> 
+                                <div class="timeline-body"> 
+                                    <p>
+                                        杭州雷迪森铂丽大饭店，我们的梦幻婚礼
+                                    </p>
+                                </div> 
+                            </div> 
+                        </li>
+                    </ul>
+                </div>
+            </div>                               
+        </div>
+        <div class="separator"></div>       
+    </section>
+
+    <!--Big Moments-->
+    <section id="moments">
+        <div class="container-fluid white">         
+            <!--Moments to remember-->
+            <div class="container">           
+                <div class="row">            
+                    <div class="col-md-12">
+                        <div class="heading">
+                            <h2 class="wow fadeInUp underline padtop50" data-wow-delay="0.5s">Moments to Remember</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.7s">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bigmoments">
+                <div id="owl-moments" class="owl-carousel">
+                   <div class="col-xs-12 col-sm-6 col-md-3 owl-item">
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g1.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g1.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-photo fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g5.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g5.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-photo fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                   </div>
+                   
+                   <div class="col-xs-12 col-sm-6 col-md-3 owl-item">
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g2.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g2.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-video-camera fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g6.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g6.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-video-camera fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                   </div>
+                   
+                   <div class="col-xs-12 col-sm-6 col-md-3 owl-item">
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g3.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g3.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-photo fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>   
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g7.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g7.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-photo fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>   
+                   </div>
+                   
+                   <div class="col-xs-12 col-sm-6 col-md-3 owl-item">
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g4.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g4.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-video-camera fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g8.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g8.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-video-camera fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                   </div>
+                   <div class="col-xs-12 col-sm-6 col-md-3 owl-item">
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g1.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g1.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-photo fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g5.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g5.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-photo fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                   </div>
+                   
+                   <div class="col-xs-12 col-sm-6 col-md-3 owl-item">
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g2.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g2.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-video-camera fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g6.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g6.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-video-camera fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                   </div>
+                   
+                   <div class="col-xs-12 col-sm-6 col-md-3 owl-item">
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g3.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g3.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-photo fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>   
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g7.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g7.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-photo fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>   
+                   </div>
+                   
+                   <div class="col-xs-12 col-sm-6 col-md-3 owl-item">
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g4.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g4.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-video-camera fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <ul class="grid cs-style-3">
+                            <li>
+                                <figure>
+                                    <img src="{% static "images/g8.jpg" %}" class="img-responsive" alt="portfolio">
+                                    <a href="{% static "images/g8.jpg" %}" class="popup-image" data-effect="mfp-zoom-in"><span class="fa fa-video-camera fa-2x"></span></a>
+                                    <figcaption>
+                                        <h4>Portfolio</h4>
+                                        <span>by Jacob Cummings</span>    
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                   </div>                        
+                </div>
+             </div>
+            <!--Special Events-->
+            <div class="container">                           
+                <div class="row">            
+                    <div class="col-md-12">
+                        <div class="heading">
+                            <h2 class="wow fadeInUp underline padtop50" data-wow-delay="0.5s">Special Events</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.7s">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="event wow flipInX" data-wow-delay="0.5s">
+                            <i class="icon icolove-home"></i>
+                            <h4 class="text-uppercase">Moved to our new home</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="event alternative wow flipInX" data-wow-delay="0.5s">
+                            <i class="icon icolove-plane"></i>
+                            <h4 class="text-uppercase">Malaysia Trip</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="event wow flipInX" data-wow-delay="0.5s">
+                            <i class="icon icolove-car"></i>
+                            <h4 class="text-uppercase">Got Our New Car</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="event alternative wow flipInX" data-wow-delay="0.5s">
+                            <i class="icon icolove-like"></i>
+                            <h4 class="text-uppercase">Adam Got His Dream Job</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="event wow flipInX" data-wow-delay="0.5s">
+                            <i class="icon icolove-graduate"></i>
+                            <h4 class="text-uppercase">EVE honored her PhD</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="event alternative wow flipInX" data-wow-delay="0.5s">
+                            <i class="icon icolove-football"></i>
+                            <h4 class="text-uppercase">Attended Brazil Worldcup</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>                                                  
+            <div class="separator"></div>
+        
+        </div>
+    </section>
+    
+    <!--Favourites List-->
+    <section id="favourites" class="white">       
+        <div class="container">
+            <div class="row">               
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h2 class="wow fadeIn underline padtop50" data-wow-delay="0.5s">Our Favourites</h2>
+                    </div>                         
+                </div>
+                <div class="col-md-12 favlist">             
+                    <img src="{% static "images/couple.jpg" %}" alt="couple">
+                    <br></br>
+                    <div class="favlist-title">
+                        <div class="favlist-name">Yue</div>
+                        <div class="favlist-name">Ying</div>
+                    </div>
+                    
+                    <ul class="timeline">
+                        <li>
+                            
+                            <div class="timeline-badge tooltips wow fadeIn" data-wow-delay="0.5s" data-toggle="tooltip" data-placement="top" title="最爱的食物"><i class="icon icolove-meal"></i></div> 
+                            <div class="timeline-left wow fadeInLeft" data-wow-delay="0.7s">
+                                <h4 class="timeline-title">香蕉</h4>
+                                <p>给我一根香蕉，我能撬动整个地球</p>
+                            </div>
+                            <div class="timeline-right wow fadeInRight" data-wow-delay="0.7s">
+                                <h4 class="timeline-title">杨梅</h4>
+                                <p>红实缀青枝，烂漫照前坞</p>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            
+                            <div class="timeline-badge tooltips wow fadeIn" data-wow-delay="0.5s" data-toggle="tooltip" data-placement="top" title="最爱的电影"><i class="icon icolove-film"></i></div> 
+                            <div class="timeline-left wow fadeInLeft" data-wow-delay="0.7s">
+                                <h4 class="timeline-title">十二怒汉</h4>
+                                <p>Wherever you run into it, prejudice always obscures the truth</p>
+                            </div>
+                            <div class="timeline-right wow fadeInRight" data-wow-delay="0.7s">
+                                <h4 class="timeline-title">史密斯夫妇</h4>
+                                <p>I guess that‘s what happens in the end, you start thinking about the beginning</p>
+                            </div>                        
+                            
+                            
+                        </li>
+                        
+                        <li>
+                            
+                            <div class="timeline-badge tooltips wow fadeIn" data-wow-delay="0.5s" data-toggle="tooltip" data-placement="top" title="最爱的颜色"><i class="icon icolove-palette"></i></div> 
+                            <div class="timeline-left wow fadeInLeft" data-wow-delay="0.7s">
+                                <h4 class="timeline-title">黑色</h4>
+                                <p>黑夜给了我黑色的眼睛，我却用它寻找你</p>
+                            </div>
+                            <div class="timeline-right wow fadeInRight" data-wow-delay="0.7s">
+                                <h4 class="timeline-title">粉红</h4>
+                                <p>浪漫的夏季，还有浪漫的一个你，给我一个粉红的回忆</p>
+                            </div>                        
+                            
+                            
+                        </li>
+                        
+                        <li>
+                            
+                            <div class="timeline-badge tooltips wow fadeIn" data-wow-delay="0.5s" data-toggle="tooltip" data-placement="top" title="最爱的音乐"><i class="icon icolove-music"></i></div> 
+                            <div class="timeline-left wow fadeInLeft" data-wow-delay="0.7s">
+                                <h4 class="timeline-title">朴树</h4>
+                                <p>痴迷流连人间， 我为她而狂野</p>
+                            </div>
+                            <div class="timeline-right wow fadeInRight" data-wow-delay="0.7s">
+                                <h4 class="timeline-title">孙燕姿</h4>
+                                <p>我遇见你，是最美丽的意外</p>
+                            </div>                        
+                            
+                            
+                        </li>
+                    </ul>
+                                
+                </div>
+                
+            </div>            
+        </div>       
+        <!--common Favorites Parallax-->
+        <!-- <div class="container-fluid commonfav">
+            <div class="row">
+                <div class="col-lg-12 parallax-section common-parallax">
+                    <div class="overlay"></div>
+                    <div class="col-md-12">
+                        <h2 class="underline2 wow fadeIn" data-wow-delay="0.5s">Common Favorites</h2>
+                        <div id="owl-common" class="owl-carousel wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="owl-item">
+                                <div class="common">
+                                    <div class="icon icolove-place common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Place"></div>
+                                    <h4>Maldive Islands</h4>
+                                </div>
+                                <div class="common">
+                                    <div class="icon icolove-book common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Book"></div>
+                                    <h4>Pride and Prejudice</h4>
+                                </div>                                                       
+                            </div> 
+                            
+                            <div class="owl-item">
+                                <div class="common">
+                                    <div class="icon icolove-weather common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Season"></div>
+                                    <h4>Winter & Spring</h4>
+                                </div>
+                                <div class="common">
+                                    <div class="icon icolove-music common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Song"></div>
+                                    <h4>Your Song - Elton John</h4>
+                                </div>                                                       
+                            </div>
+                            
+                            <div class="owl-item">
+                                <div class="common">
+                                    <div class="icon icolove-mic common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Singer"></div>
+                                    <h4>Frank Sinatra</h4>
+                                </div>
+                                <div class="common">
+                                    <div class="icon icolove-clothes common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Brand"></div>
+                                    <h4>Dolce and Gabbana</h4>
+                                </div>                                                       
+                            </div> 
+                            
+                            <div class="owl-item">
+                                <div class="common">
+                                    <div class="icon icolove-place common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Place"></div>
+                                    <h4>Maldive Islands</h4>
+                                </div>
+                                <div class="common">
+                                    <div class="icon icolove-book common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Book"></div>
+                                    <h4>Pride and Prejudice</h4>
+                                </div>                                                       
+                            </div> 
+                            
+                            <div class="owl-item">
+                                <div class="common">
+                                    <div class="icon icolove-weather common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Season"></div>
+                                    <h4>Winter & Spring</h4>
+                                </div>
+                                <div class="common">
+                                    <div class="icon icolove-music common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Song"></div>
+                                    <h4>Your Song - Elton John</h4>
+                                </div>                                                       
+                            </div>
+                            
+                            <div class="owl-item">
+                                <div class="common">
+                                    <div class="icon icolove-mic common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Singer"></div>
+                                    <h4>Frank Sinatra</h4>
+                                </div>
+                                <div class="common">
+                                    <div class="icon icolove-clothes common-icon tooltips" data-toggle="tooltip" data-placement="top" title="Favourite Brand"></div>
+                                    <h4>Dolce and Gabbana</h4>
+                                </div>                                                       
+                            </div>                                                                                                                                                      
+                        </div>
+
+                    </div>
+                </div> 
+            </div>
+        </div> -->
+        
+    </section>
+    
+    <!--Footer Section-->
+    <section class="footer">    
+        <!--Footer One -->
+        <div class="container-fluid color pattern">
+            <div class="container">
+                <div class="row">           
+                    <div class="col-md-12 footer1">
+                        <div class="wow fadeInUp" data-wow-delay="0.5s">
+                            <p class="text-center"></p>
+                            <!-- <div class="footer-tweet">
+                            <span class="fa fa-twitter fa-5x"></span>
+                            </div> -->
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>       
+        <!--Footer Two-->
+        <div class="container-fluid dark footer2">
+            <div class="container">
+                <div class="row">           
+                <div class="col-md-12">
+                    <!--<img src="images/logo-grey.png" alt="logo"> -->                  
+                    <p>© randomp 2015 - All Rights Reserved.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>            
+
+    <!-- Al JS Plugins -->
+    <script src="{% static "js/modernizr.custom.js" %}"></script>
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/jquery-ui.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/jquery.easing.min.js" %}"></script>
+    <script src="{% static "js/jquery.sticky.js" %}"></script>
+    <script src="{% static "js/jquery.parallax.js" %}"></script>
+    <script src="{% static "js/masonry.pkgd.min.js" %}"></script>
+    <script src="{% static "js/annyang.min.js" %}"></script>
+    <script src="{% static "js/wow.min.js" %}"></script>
+    <script src="{% static "js/waypoints.min.js" %}"></script>
+    <script src="{% static "js/smoothscrolling.js" %}"></script>
+    <script src="{% static "js/custom.js" %}"></script>    
+    <script src="{% static "js/fss.js" %}"></script>      
+    <script src="{% static "js/geo.js" %}"></script>      
+    <script src="{% static "js/jquery.countTo.js" %}"></script>
+    <script src="{% static "js/jquery.mixitup.min.js" %}"></script>
+    <script src="{% static "js/imagesloaded.pkgd.min.js" %}"></script>
+    <script src="{% static "js/owl.carousel.min.js" %}"></script>
+    <script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+    <script src="{% static "js/slide-fade-content.js" %}"></script>
+    <script src="{% static "js/twitter/jquery.tweet.js" %}"></script>
+    <script src="{% static "js/prefixfree.js" %}"></script>
+    <script src="{% static "js/countup.js" %}"></script>
+    <script src="{% static "js/modernizr.hover.js" %}"></script>
+  </body>
+</html>
+
